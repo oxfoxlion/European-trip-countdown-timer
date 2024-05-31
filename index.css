@@ -1,7 +1,13 @@
 body{
     background-color: white;
 }
-  
+
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 #timer {
   color: #eeeeee;
   text-align: center;
