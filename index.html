@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歐洲大冒險倒數計時</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900">
+</head>
+<body>
+    <div id="timer">
+
+        <div class="days"> 
+            <div id="days" class="numbers "> </div>days</div> 
+          <div class="hours"> 
+            <div  id="hours" class="numbers"> </div>hours</div> 
+          <div class="minutes"> 
+            <div  id="minutes" class="numbers"> </div>minutes</div> 
+          <div   class="seconds"> 
+            <div id="seconds" class="numbers"> </div>seconds</div> 
+          </div>
+    </div>
+    
+    <h3 class="source">
+      計時器引用自 <a href = "https://blog.shorouk.dev/notion-widgets-gallery/notion-widget-count-down/">Notion Widget: Count Down</a>
+    </h3>
+  <script>
+    const year = new Date().getFullYear();
+const myDate = new Date('Aug 21, 2024 19:00:00');
+console.log(myDate);
+
+// countdown
+let timer = setInterval(function() {
+
+  // get today's date
+  const today = new Date().getTime();
+
+  // get the difference
+  const diff = myDate - today;
+
+  // math
+  let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+  // display
+  document.getElementById("days").innerHTML=days
+  document.getElementById("hours").innerHTML=hours
+  document.getElementById("minutes").innerHTML=minutes
+  document.getElementById("seconds").innerHTML=seconds
+
+
+
+}, 1);
+  </script>
+</body>
+</html>
