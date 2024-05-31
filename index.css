@@ -85,3 +85,31 @@ body{
   margin-top:10px;
   text-align:center;
 }
+
+@media (max-width:580px) {
+  .days, .hours, .minutes, .seconds {
+    display: inline-block;
+    padding: 20px;
+    width: 50px;
+  }
+
+  #timer {
+    color: #eeeeee;
+    font-size: .7em;
+    letter-spacing: 0px;
+  }
+}
+
+@media (max-width:380px) {
+  .days, .hours, .minutes, .seconds {
+    display: inline-block;
+    padding: 20px;
+    width: 40px;
+  }
+
+  #timer {
+    color: #eeeeee;
+    font-size: .7em;
+    letter-spacing: 0px;
+  }
+}
